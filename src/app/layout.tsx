@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Ideas worth spreading. Join us for TEDx MSU Baroda's 'Echoes of Tomorrow'",
     type: "website",
   },
+  verification: {
+    google: "N3VwiOPynDzJVKX90V2MKXbipIpohHi8K8B2jPfDmyg",
+  },
 };
 
 export default function RootLayout({
