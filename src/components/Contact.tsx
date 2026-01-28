@@ -37,8 +37,8 @@ export default function Contact() {
                         </div>
                         <div>
                             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Follow Us</p>
-                            <a href="#" className="text-white font-medium hover:text-red-500 transition-colors">
-                                @tedxmsubaroda
+                            <a href="https://www.instagram.com/tedxmsu_baroda/" className="text-white font-medium hover:text-red-500 transition-colors">
+                                @tedxmsu_baroda
                             </a>
                         </div>
                     </div>
@@ -49,8 +49,8 @@ export default function Contact() {
                         </div>
                         <div>
                             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Connect With Us</p>
-                            <a href="#" className="text-white font-medium hover:text-red-500 transition-colors">
-                                LinkedIn / tedxmsubaroda
+                            <a href="https://www.linkedin.com/company/tedxmsu-baroda/" className="text-white font-medium hover:text-red-500 transition-colors">
+                                LinkedIn / tedxmsu-baroda
                             </a>
                         </div>
                     </div>
