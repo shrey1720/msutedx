@@ -6,12 +6,17 @@ export interface Speaker {
   image: string;
   topic: string;
   talkDescription: string;
+  socials?: {
+    instagram?: string;
+    linkedin?: string;
+    twitter?: string;
+  };
 }
 
 export interface TeamMember {
   id: string;
   name: string;
-  role: string;
+  role: 'Organizer' | 'Core Team' | 'Curator' | 'Content & Research' | 'Design' | 'Operations' | 'Marketing';
   bio: string;
   image: string;
 }
@@ -36,55 +41,31 @@ export const speakers: Speaker[] = [
     id: '1',
     name: 'Dr. Priya Sharma',
     title: 'Neuroscience Researcher',
-    bio: 'Leading researcher in cognitive neuroscience at IIT Bombay, specializing in memory formation and learning processes.',
+    bio: 'Dr. Priya Sharma is a leading researcher in cognitive neuroscience at IIT Bombay. With over 15 years of experience, she specializes in memory formation and learning processes. Her work has been published in numerous international journals and she is a frequent speaker at global science conferences. At Syntopia, she will delve into how our brains navigate the intersection of tradition and futuristic technology.',
     image: '/speakers/priya-sharma.jpg',
     topic: 'The Future of Learning',
-    talkDescription: 'Exploring how neuroscience is revolutionizing our understanding of how we learn and retain information.'
+    talkDescription: 'Exploring how neuroscience is revolutionizing our understanding of how we learn and retain information.',
+    socials: { linkedin: '#', twitter: '#' }
   },
   {
     id: '2',
     name: 'Rajesh Kumar',
     title: 'Sustainable Energy Entrepreneur',
-    bio: 'Founder of GreenVolt Solutions, pioneering affordable solar solutions for rural communities across India.',
+    bio: 'Rajesh Kumar is the founder of GreenVolt Solutions, a pioneer in bringing affordable solar energy to rural India. An engineer by training and an entrepreneur by heart, Rajesh has transformed thousands of lives by providing clean energy. His talk at Syntopia focuses on how sustainable practices are not just a choice but a necessity for our collective future survival.',
     image: '/speakers/rajesh-kumar.jpg',
     topic: 'Energy for All',
-    talkDescription: 'How innovative business models can accelerate the transition to renewable energy in developing nations.'
+    talkDescription: 'How innovative business models can accelerate the transition to renewable energy in developing nations.',
+    socials: { linkedin: '#' }
   },
   {
     id: '3',
     name: 'Dr. Maya Patel',
     title: 'Cultural Anthropologist',
-    bio: 'Professor at MSU Baroda, studying the intersection of technology and traditional knowledge systems.',
+    bio: 'Dr. Maya Patel is a Professor at MSU Baroda, where she has spent two decades studying the delicate intersection of technology and traditional knowledge systems. Her research explores how modern tools can be used to preserve ancient wisdom. At Syntopia, she shares her vision of a balanced world where the past and the future coexist in perfect harmony.',
     image: '/speakers/maya-patel.jpg',
     topic: 'Digital Heritage',
-    talkDescription: 'Preserving cultural heritage in the digital age while maintaining authenticity and community ownership.'
-  },
-  {
-    id: '4',
-    name: 'Arun Desai',
-    title: 'Urban Planner',
-    bio: 'Director of Smart Cities Initiative at Ahmedabad Municipal Corporation, transforming urban spaces for future generations.',
-    image: '/speakers/arun-desai.jpg',
-    topic: 'Cities of Tomorrow',
-    talkDescription: 'Reimagining urban development through sustainable design and community-driven planning.'
-  },
-  {
-    id: '5',
-    name: 'Dr. Vikram Singh',
-    title: 'Climate Scientist',
-    bio: 'Lead researcher at Indian Institute of Tropical Meteorology, studying monsoon patterns and climate change impacts.',
-    image: '/speakers/vikram-singh.jpg',
-    topic: 'Climate Resilience',
-    talkDescription: 'Building adaptive strategies for communities facing increasing climate variability and extreme weather events.'
-  },
-  {
-    id: '6',
-    name: 'Sneha Rao',
-    title: 'Social Entrepreneur',
-    bio: 'Founder of EduBridge, connecting underprivileged students with quality education through technology.',
-    image: '/speakers/sneha-rao.jpg',
-    topic: 'Education Equity',
-    talkDescription: 'Leveraging technology to bridge the education gap and create opportunities for all learners.'
+    talkDescription: 'Preserving cultural heritage in the digital age while maintaining authenticity and community ownership.',
+    socials: { instagram: '#' }
   }
 ];
 
@@ -92,79 +73,62 @@ export const team: TeamMember[] = [
   {
     id: '1',
     name: 'Amit Patel',
-    role: 'Event Director',
-    bio: 'Final year MBA student passionate about organizing impactful events that bring communities together.',
+    role: 'Organizer',
+    bio: 'Leading the vision for TEDxMSUBaroda with a focus on community and innovation.',
     image: '/team/amit-patel.jpg'
   },
   {
     id: '2',
     name: 'Kavita Shah',
-    role: 'Creative Director',
-    bio: 'Design student with a vision for creating authentic, meaningful visual experiences.',
+    role: 'Design',
+    bio: 'Crafting the visual identity of Syntopia with a modern and minimal aesthetic.',
     image: '/team/kavita-shah.jpg'
   },
   {
     id: '3',
     name: 'Rahul Mehta',
-    role: 'Technical Lead',
-    bio: 'Computer Science student specializing in web development and digital experiences.',
+    role: 'Core Team',
+    bio: 'Ensuring technical excellence and digital reach for the event.',
     image: '/team/rahul-mehta.jpg'
   },
   {
     id: '4',
     name: 'Priya Joshi',
-    role: 'Speaker Coordinator',
-    bio: 'Communications student with experience in event management and speaker relations.',
+    role: 'Operations',
+    bio: 'Managing the ground logistics to ensure a seamless experience for all attendees.',
     image: '/team/priya-joshi.jpg'
   },
   {
     id: '5',
     name: 'Vikram Singh',
-    role: 'Marketing Lead',
-    bio: 'Marketing student focused on authentic storytelling and community engagement.',
+    role: 'Marketing',
+    bio: 'Spreading the word and building excitement for the Syntopia journey.',
     image: '/team/vikram-singh.jpg'
   },
   {
     id: '6',
     name: 'Maya Desai',
-    role: 'Content Curator',
-    bio: 'Literature student passionate about crafting narratives that inspire and educate.',
+    role: 'Curator',
+    bio: 'Selecting ideas worth spreading that align with our theme of Syntopia.',
     image: '/team/maya-desai.jpg'
   },
   {
     id: '7',
     name: 'Arjun Kumar',
-    role: 'Operations Manager',
-    bio: 'Business Administration student ensuring smooth execution of all event logistics.',
+    role: 'Content & Research',
+    bio: 'Deep diving into topics to provide rich, well-researched content for the event.',
     image: '/team/arjun-kumar.jpg'
-  },
-  {
-    id: '8',
-    name: 'Neha Sharma',
-    role: 'Volunteer Coordinator',
-    bio: 'Psychology student dedicated to building strong, motivated volunteer teams.',
-    image: '/team/neha-sharma.jpg'
-  },
-  {
-    id: '9',
-    name: 'Rohan Gupta',
-    role: 'Media Lead',
-    bio: 'Film and media student capturing the essence of TEDx events through compelling visuals.',
-    image: '/team/rohan-gupta.jpg'
-  },
-  {
-    id: '10',
-    name: 'Ananya Patel',
-    role: 'Sponsorship Coordinator',
-    bio: 'Economics student building partnerships that support TEDx mission and community impact.',
-    image: '/team/ananya-patel.jpg'
   }
 ];
 
 export const theme = {
-  title: 'Echoes of Tomorrow',
-  description: 'In an era of rapid technological advancement and unprecedented global challenges, TEDx MSU Baroda explores how ideas from diverse fields converge to shape our collective future. From neuroscience to sustainable energy, cultural preservation to urban planning, our speakers examine the echoes of innovation that will define tomorrow.',
-  philosophy: 'TEDx is an independently organized TED event where live TED-like talks and videos are shared with the community. At TEDx MSU Baroda, we believe in the power of ideas to transform perspectives and inspire action. Our carefully curated program brings together thought leaders, innovators, and visionaries to explore the intersections of technology, culture, and human potential.'
+  title: 'Syntopia',
+  tagline: 'Harmonizing Human Potential',
+  description: 'Syntopia is the vision of a future where diverse ideas, cultures, and technologies converge to create a harmonious whole. It is a state of balanced innovation, where we don\'t just move forward, but move forward together, respecting our roots while reaching for the stars.',
+  whyItMatters: 'In a fragmented world, Syntopia offers a path of unity and purposeful progress. It matters today because it challenges us to integrate sustainable practices, ethical technology, and human values into every layer of our development.',
+  whatExpected: 'Attendees can expect a curated journey through mind-bending talks, immersive experiences, and deep discussions that challenge the status quo and inspire a new way of thinking about our shared future.',
+  closingLine: 'Join us at Syntopia, where the future finds its balance.',
+  philosophy: 'Syntopia explores the convergence of human potential and technological advancement. We believe that by synthesizing different perspectives, we can unlock solutions to our most pressing challenges and build a world that is both advanced and deeply human.'
 };
 
 export const program: ProgramItem[] = [
@@ -178,7 +142,7 @@ export const program: ProgramItem[] = [
     id: '2',
     time: '10:00 AM',
     title: 'Opening Ceremony',
-    description: 'TEDx introduction and theme presentation'
+    description: 'TEDx introduction and Syntopia theme presentation'
   },
   {
     id: '3',
@@ -209,27 +173,12 @@ export const program: ProgramItem[] = [
   },
   {
     id: '7',
-    time: '1:45 PM',
-    title: 'Cities of Tomorrow',
-    description: 'Arun Desai reimagines urban development',
-    speaker: 'Arun Desai'
+    time: '2:30 PM',
+    title: 'Interactive Workshop',
+    description: 'Synthesizing ideas for a balanced tomorrow'
   },
   {
     id: '8',
-    time: '2:30 PM',
-    title: 'Climate Resilience',
-    description: 'Dr. Vikram Singh on adaptive strategies',
-    speaker: 'Dr. Vikram Singh'
-  },
-  {
-    id: '9',
-    time: '3:15 PM',
-    title: 'Education Equity',
-    description: 'Sneha Rao on technology for education',
-    speaker: 'Sneha Rao'
-  },
-  {
-    id: '10',
     time: '4:00 PM',
     title: 'Closing Ceremony',
     description: 'Reflections and community discussion'
@@ -254,11 +203,5 @@ export const sponsors: Sponsor[] = [
     name: 'Local Business Partner',
     logo: '/sponsors/local-partner.jpg',
     tier: 'gold'
-  },
-  {
-    id: '4',
-    name: 'Community Sponsor',
-    logo: '/sponsors/community.jpg',
-    tier: 'silver'
   }
 ];

@@ -14,31 +14,36 @@ export default function About() {
           variants={fadeInUp}
           className="text-center"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            What is TEDx?
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-10">
+            About <span className="text-red-600">TEDx</span>
           </h2>
 
-          <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p>
-              In the spirit of ideas worth spreading, TEDx is a program of local,
-              self-organized events that bring people together to share a TED-like
-              experience. At a TEDx event, TED Talks video and live speakers combine
-              to spark deep discussion and connection in a small group. These local,
-              self-organized events are branded TEDx, where x = independently
-              organized TED event.
-            </p>
+          <div className="space-y-8 text-gray-300 text-lg leading-relaxed text-left">
+            <div className="glass-card p-8 group hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-4">What is TED?</h3>
+              <p>
+                TED is a nonprofit organization devoted to Ideas Worth Spreading, often in the form of short talks delivered by leading thinkers and doers. Many of these talks are given at TED conferences, intimate co-located events and thousands of independently organized TEDx events around the world.
+              </p>
+            </div>
 
-            <p>
-              The TED Conference provides general guidance for the TEDx program,
-              but individual TEDx events are self-organized (subject to certain rules
-              and regulations).
-            </p>
+            <div className="glass-card p-8 group hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-4">What is TEDx?</h3>
+              <p>
+                In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event.
+              </p>
+            </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg mt-8">
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                TEDx MSU Baroda is proud to be part of this global movement,
-                bringing together thinkers, innovators, and community members
-                to explore ideas that matter.
+            <div className="glass-card p-8 group hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-4">TED vs. TEDx</h3>
+              <p>
+                The primary difference is that TED is the global organization and main conference, while TEDx events are fully planned and executed independently on a community-by-community basis, under a free license granted by TED.
+              </p>
+            </div>
+
+            <div className="bg-red-600/5 border border-red-600/20 p-6 rounded-xl mt-12 text-center">
+              <p className="text-sm font-medium text-red-500 uppercase tracking-widest mb-2 italic">Official Statement</p>
+              <p className="text-gray-400 text-sm leading-relaxed italic">
+                This independent TEDx event is operated under license from TED. TEDxMSUBaroda is not endorsed by TED.
               </p>
             </div>
           </div>

@@ -38,26 +38,26 @@ export default function Sponsors() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className={`bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 hover:border-white/20 transition-all ${tierStyles[sponsor.tier]}`}
+              className={`glass-card glass-card-hover p-8 ${tierStyles[sponsor.tier]}`}
             >
-              <div className="aspect-video bg-white/5 rounded-lg flex items-center justify-center mb-4 border border-white/5">
+              <div className="aspect-video bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/5">
                 {/* Placeholder for sponsor logo */}
                 <div className="text-center">
-                  <div className="text-4xl mb-2">🏢</div>
-                  <span className="text-gray-400 text-sm">{sponsor.name}</span>
+                  <div className="text-5xl mb-2">🏢</div>
+                  <span className="text-gray-500 font-bold uppercase tracking-widest text-[10px]">{sponsor.name}</span>
                 </div>
               </div>
 
               <div className="text-center">
-                <h3 className="font-semibold text-white mb-2">
+                <h3 className="font-bold text-white text-lg mb-2">
                   {sponsor.name}
                 </h3>
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${sponsor.tier === 'platinum' ? 'bg-yellow-100 text-yellow-800' :
-                    sponsor.tier === 'gold' ? 'bg-yellow-50 text-yellow-700' :
-                      sponsor.tier === 'silver' ? 'bg-gray-100 text-gray-700' :
-                        'bg-orange-100 text-orange-800'
+                <span className={`inline-block px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${sponsor.tier === 'platinum' ? 'bg-yellow-100 text-yellow-800' :
+                  sponsor.tier === 'gold' ? 'bg-yellow-50 text-yellow-700' :
+                    sponsor.tier === 'silver' ? 'bg-gray-100 text-gray-700' :
+                      'bg-orange-100 text-orange-800'
                   }`}>
-                  {sponsor.tier.charAt(0).toUpperCase() + sponsor.tier.slice(1)}
+                  {sponsor.tier} Partner
                 </span>
               </div>
             </motion.div>
@@ -69,14 +69,19 @@ export default function Sponsors() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-center mt-12"
+          className="text-center mt-20"
         >
-          <p className="text-gray-400">
-            Interested in partnering with us?{' '}
-            <a href="mailto:contact@tedxmsubaroda.com" className="text-red-500 hover:underline">
-              Get in touch
+          <div className="inline-block glass-card p-8 border-red-600/10">
+            <p className="text-gray-400 mb-4">
+              Interested in being part of the Syntopia journey?
+            </p>
+            <a
+              href="mailto:partners@tedxmsubaroda.com"
+              className="text-2xl font-bold text-white hover:text-red-500 transition-colors underline decoration-red-600 underline-offset-8"
+            >
+              Collaborate as a Partner
             </a>
-          </p>
+          </div>
         </motion.div>
       </div>
     </section>

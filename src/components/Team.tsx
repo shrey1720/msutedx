@@ -35,19 +35,19 @@ export default function Team() {
               key={member.id}
               variants={cardHover}
               whileHover="hover"
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-red-600/50 transition-colors"
+              className="glass-card glass-card-hover p-8 text-center"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-gray-300 text-sm">Photo</span>
+              <div className="w-24 h-24 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full mx-auto mb-6 flex items-center justify-center border border-white/10">
+                <span className="text-gray-500 text-sm font-bold">Photo</span>
               </div>
 
-              <h3 className="text-lg font-semibold text-white mb-1">
+              <h3 className="text-xl font-bold text-white mb-1">
                 {member.name}
               </h3>
-              <p className="text-red-600 font-medium mb-3">
+              <p className="text-red-600 font-bold text-sm mb-4 uppercase tracking-widest">
                 {member.role}
               </p>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed font-light">
                 {member.bio}
               </p>
             </motion.div>

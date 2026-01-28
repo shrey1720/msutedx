@@ -44,22 +44,22 @@ export default function Timeline() {
                 <div className="flex-shrink-0 w-4 h-4 bg-red-600 rounded-full mt-2 ml-6 border-4 border-white shadow"></div>
 
                 {/* Content */}
-                <div className="ml-12 bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 flex-1 hover:border-red-500/30 transition-colors">
+                <div className="ml-12 glass-card glass-card-hover p-6 flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                     <h3 className="text-xl font-semibold text-white">
                       {item.title}
                     </h3>
-                    <span className="text-red-500 font-medium mt-1 sm:mt-0">
+                    <span className="text-red-600 font-bold mt-1 sm:mt-0">
                       {item.time}
                     </span>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-400 leading-relaxed text-sm">
                     {item.description}
                   </p>
 
                   {item.speaker && (
-                    <p className="text-sm text-gray-400 mt-2 italic">
+                    <p className="text-sm text-gray-500 mt-2 italic font-medium">
                       Speaker: {item.speaker}
                     </p>
                   )}

@@ -6,28 +6,57 @@
 
 @theme inline {
   --font-sans: var(--font-inter);
+  
+  /* Standardized Colors */
+  --color-ted-red: #e62b1e;
+  --color-ted-red-light: #ff4d4d;
+  
+  /* Glassmorphism Tokens */
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --bg-glass-hover: rgba(255, 255, 255, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --border-red-glow: rgba(230, 43, 30, 0.5);
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  * {
+    box-sizing: border-box;
+    @apply transition-colors duration-300;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 p-0 font-sans leading-relaxed text-gray-300 bg-black overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold tracking-tight;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden transition-all duration-300;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-inter), sans-serif;
-  line-height: 1.6;
-  color: #ffffff;
-  background-color: #000000;
-  overflow-x: hidden;
+  .glass-card-hover {
+    @apply hover:bg-white/10 hover:border-red-600/50 hover:shadow-[0_0_20px_rgba(230,43,30,0.15)];
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .ted-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-red-600;
+  }
 }
 
 ::selection {
-  background-color: #e62b1e;
+  background-color: var(--color-ted-red);
   color: #ffffff;
 }
 
@@ -41,30 +70,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e62b1e;
+  background: var(--color-ted-red);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff4d4d;
+  background: var(--color-ted-red-light);
 }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Line clamp utility */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
