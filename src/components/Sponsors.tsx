@@ -76,7 +76,7 @@ export default function Sponsors() {
               Interested in being part of the Syntopia journey?
             </p>
             <a
-              href="mailto:partners@tedxmsubaroda.com"
+              href="mailto:msuxtedx09@gmail.com"
               className="text-2xl font-bold text-white hover:text-red-500 transition-colors underline decoration-red-600 underline-offset-8"
             >
               Collaborate as a Partner

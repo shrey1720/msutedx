@@ -1,9 +1,24 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Instagram, Linkedin, Send } from "lucide-react";
 
+const CONTACT_EMAIL = "msuxtedx09@gmail.com";
+
 export default function Contact() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const subject = encodeURIComponent(`Website contact from ${name || email || "visitor"}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+        const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+        window.location.href = mailto;
+    };
+
     return (
         <section id="contact" className="section-padding">
             <div className="text-center mb-16">
@@ -25,8 +40,8 @@ export default function Contact() {
                         </div>
                         <div>
                             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Email Us</p>
-                            <a href="mailto:contact@tedxmsubaroda.com" className="text-white font-medium hover:text-red-500 transition-colors">
-                                contact@tedxmsubaroda.com
+                            <a href={`mailto:${CONTACT_EMAIL}`} className="text-white font-medium hover:text-red-500 transition-colors">
+                                {CONTACT_EMAIL}
                             </a>
                         </div>
                     </div>
@@ -58,13 +73,15 @@ export default function Contact() {
 
                 {/* Contact Form */}
                 <div className="lg:col-span-2">
-                    <form className="glass-card p-10 space-y-6" onSubmit={(e) => e.preventDefault()}>
+                    <form className="glass-card p-10 space-y-6" onSubmit={handleSubmit}>
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-gray-500 uppercase tracking-widest">Name</label>
                                 <input
                                     type="text"
                                     placeholder="Your Name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-red-600/50 transition-colors"
                                 />
                             </div>
@@ -73,6 +90,8 @@ export default function Contact() {
                                 <input
                                     type="email"
                                     placeholder="Your Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-red-600/50 transition-colors"
                                 />
                             </div>
@@ -82,6 +101,8 @@ export default function Contact() {
                             <textarea
                                 rows={4}
                                 placeholder="How can we help?"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                                 className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-red-600/50 transition-colors resize-none"
                             />
                         </div>

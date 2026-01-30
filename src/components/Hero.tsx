@@ -8,7 +8,7 @@ const subtitleWords = ['Syntopia'];
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden pt-32 pb-20">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-red-600/30 via-transparent to-transparent" />

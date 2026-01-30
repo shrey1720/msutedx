@@ -23,7 +23,7 @@ export default function Home() {
         <Navbar />
         <Hero />
 
-        <SectionWrapper delay={0.2} className="w-full -mt-20 md:-mt-40 mb-20">
+        <SectionWrapper delay={0.2} className="w-full mb-20 relative z-20">
           <CountdownTimer />
         </SectionWrapper>
 
