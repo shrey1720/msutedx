@@ -14,15 +14,22 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-600/30 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        {/* Main title */}
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        {/* Main title wrapper to prevent cutting */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-6"
+          className="mb-6 w-full"
         >
-          <h1 className="text-6xl sm:text-8xl lg:text-9xl font-black mb-4 ted-text-gradient tracking-tighter">
+          {/* 
+            Guaranteed Single-Line Scaling: 
+            Using 6.8vw ensures the 13 characters of "TEDxMSUBaroda" 
+            occupy exactly ~88% of the viewport width, fitting perfectly 
+            inside the 1rem side-paddings (px-4) on even the smallest 
+            320px devices.
+          */}
+          <h1 className="text-[clamp(1.5rem,6.8vw,12rem)] font-black mb-4 ted-text-gradient tracking-tighter leading-none whitespace-nowrap">
             TEDxMSUBaroda
           </h1>
         </motion.div>
@@ -34,7 +41,7 @@ export default function Hero() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light text-red-600 tracking-[0.4em] uppercase font-serif italic">
+          <h2 className="text-2xl sm:text-5xl lg:text-6xl font-light text-red-600 tracking-[0.4em] uppercase font-serif italic">
             Syntopia
           </h2>
         </motion.div>
@@ -45,7 +52,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed"
+          className="text-lg sm:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed"
         >
           Where unconventional ideas synthesize into a harmonious future.
         </motion.p>
@@ -56,7 +63,7 @@ export default function Hero() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-16 text-sm uppercase tracking-widest text-gray-500 font-bold"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-16 text-[10px] sm:text-sm uppercase tracking-widest text-gray-500 font-bold"
         >
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
@@ -67,38 +74,6 @@ export default function Hero() {
           <span className="hidden sm:block w-1 h-1 bg-gray-800 rounded-full" />
           <span>MSU Baroda Campus</span>
         </motion.div>
-
-        {/* Action Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1.4, duration: 0.8 }}
-          className="flex flex-wrap justify-center gap-6"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-red-600 text-white font-bold rounded-full shadow-[0_0_20px_rgba(230,43,30,0.3)] hover:shadow-[0_0_40px_rgba(230,43,30,0.5)] transition-all"
-          >
-            Apply as Attendee
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-all"
-          >
-            Become a Speaker
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-all"
-          >
-            Partner with us
-          </motion.button>
-        </motion.div>
-
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}

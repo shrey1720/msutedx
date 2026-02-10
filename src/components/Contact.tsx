@@ -106,14 +106,9 @@ export default function Contact() {
                                 className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-red-600/50 transition-colors resize-none"
                             />
                         </div>
-                        <motion.button
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full py-4 bg-red-600 text-white font-bold rounded-lg flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(230,43,30,0.2)]"
-                        >
-                            <Send size={18} />
-                            Send Message
-                        </motion.button>
+                        <div className="text-center text-gray-500 text-sm italic">
+                            Email us directly for inquiries
+                        </div>
                     </form>
                 </div>
             </div>

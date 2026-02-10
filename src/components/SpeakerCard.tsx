@@ -18,10 +18,11 @@ export default function SpeakerCard({ speaker, onClick }: SpeakerCardProps) {
       className="glass-card glass-card-hover cursor-pointer group"
     >
       <div className="aspect-[4/5] bg-gray-900 relative overflow-hidden">
-        {/* Placeholder for speaker image */}
-        <div className="w-full h-full bg-gradient-to-t from-gray-900 to-transparent flex items-center justify-center">
-          <span className="text-gray-600 font-bold uppercase tracking-widest text-xs">TEDx Speaker</span>
-        </div>
+        <img
+          src={speaker.image}
+          alt={speaker.name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-red-600/10 transition-colors duration-500" />
       </div>
 
@@ -35,11 +36,6 @@ export default function SpeakerCard({ speaker, onClick }: SpeakerCardProps) {
         <p className="text-gray-400 text-sm leading-relaxed mb-6 font-light line-clamp-3">
           {speaker.bio}
         </p>
-        <div className="pt-4 border-t border-white/5">
-          <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-            Topic: <span className="text-white ml-2">{speaker.topic}</span>
-          </p>
-        </div>
       </div>
     </motion.div>
   );

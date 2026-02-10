@@ -71,35 +71,24 @@ export default function Speakers() {
                   <X size={24} />
                 </button>
 
-                <div className="aspect-video bg-gray-200 relative">
-                  {/* Placeholder for speaker image */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <span className="text-gray-600">Speaker Photo</span>
+                <div className="grid md:grid-cols-2">
+                  <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden">
+                    <img
+                      src={selectedSpeaker.image}
+                      alt={selectedSpeaker.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </div>
 
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-black mb-2">
-                    {selectedSpeaker.name}
-                  </h3>
-                  <p className="text-red-600 font-medium mb-4">
-                    {selectedSpeaker.title}
-                  </p>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-black mb-2">
-                      {selectedSpeaker.topic}
-                    </h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      {selectedSpeaker.talkDescription}
+                  <div className="p-8 md:p-10 flex flex-col justify-center">
+                    <h3 className="text-3xl font-bold text-black mb-2">
+                      {selectedSpeaker.name}
+                    </h3>
+                    <p className="text-red-600 font-semibold mb-6 text-lg">
+                      {selectedSpeaker.title}
                     </p>
-                  </div>
 
-                  <div>
-                    <h4 className="text-lg font-semibold text-black mb-2">
-                      About
-                    </h4>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed text-sm">
                       {selectedSpeaker.bio}
                     </p>
                   </div>
