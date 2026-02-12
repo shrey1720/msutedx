@@ -26,7 +26,7 @@ export default function Registration() {
                         <Ticket className="text-red-600 w-8 h-8" />
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Secure Your Spot</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Secure Your Booking</h2>
                     <div className="grid md:grid-cols-2 gap-10 text-left max-w-4xl mx-auto mb-12">
                         <div>
                             <h3 className="text-white font-bold mb-3 uppercase tracking-widest text-sm">Who is it for?</h3>
@@ -41,6 +41,14 @@ export default function Registration() {
                             </p>
                         </div>
                     </div>
+
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-red-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-[0_0_30px_rgba(230,43,30,0.3)] hover:shadow-[0_0_50px_rgba(230,43,30,0.5)] transition-all cursor-pointer"
+                    >
+                        Book Your Tickets Now
+                    </motion.button>
 
                     <p className="mt-8 text-xs text-gray-500 uppercase tracking-widest">
                         Limited seats available • February 28, 2026
