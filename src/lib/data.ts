@@ -14,7 +14,7 @@ export interface Speaker {
 export interface TeamMember {
   id: string;
   name: string;
-  role: 'Organizer' | 'Core Team' | 'Curator' | 'Content & Research' | 'Design' | 'Operations' | 'Marketing';
+  role: 'Organizer' | 'Core Team' | 'Curator' | 'Content & Research' | 'Design' | 'Operations' | 'Marketing' | 'Logistics' | 'Social Media and Design' | 'Sponsorship' | 'Propagation';
   bio: string;
 }
 
@@ -119,45 +119,69 @@ export const speakers: Speaker[] = [
 export const team: TeamMember[] = [
   {
     id: '1',
-    name: 'Amit Patel',
-    role: 'Organizer',
-    bio: 'Leading the vision for TEDxMSUBaroda with a focus on community and innovation.'
+    name: 'Dev Mistry',
+    role: 'Content & Research',
+    bio: 'Shaping narratives through thoughtful research, transforming ideas into stories that resonate with purpose and depth.'
   },
   {
     id: '2',
-    name: 'Kavita Shah',
-    role: 'Design',
-    bio: 'Crafting the visual identity of Syntopia with a modern and minimal aesthetic.'
+    name: 'Dhruv Parikh',
+    role: 'Logistics',
+    bio: 'The silent architect behind smooth execution, orchestrating resources, timelines, and coordination with steady precision.'
   },
   {
     id: '3',
-    name: 'Rahul Mehta',
-    role: 'Core Team',
-    bio: 'Ensuring technical excellence and digital reach for the event.'
+    name: 'Dhruvi Mistry',
+    role: 'Logistics',
+    bio: 'Ensuring every moving part aligns perfectly, turning complex planning into an effortless on-ground experience.'
   },
   {
     id: '4',
-    name: 'Priya Joshi',
-    role: 'Operations',
-    bio: 'Managing the ground logistics to ensure a seamless experience for all attendees.'
+    name: 'Divesh Bagul',
+    role: 'Social Media and Design',
+    bio: 'Blending creativity with strategy to craft visuals and digital stories that capture attention and spark curiosity.'
   },
   {
     id: '5',
-    name: 'Vikram Singh',
-    role: 'Marketing',
-    bio: 'Spreading the word and building excitement for the Syntopia journey.'
+    name: 'Hetvi Shah',
+    role: 'Social Media and Design',
+    bio: 'Amplifying the event&apos;s voice through engaging content and design, building excitement one post at a time.'
   },
   {
     id: '6',
-    name: 'Maya Desai',
-    role: 'Curator',
-    bio: 'Selecting ideas worth spreading that align with our theme of Syntopia.'
+    name: 'Meerat Dave',
+    role: 'Sponsorship',
+    bio: 'Building meaningful partnerships and securing support that fuels the vision and sustains the journey.'
   },
   {
     id: '7',
-    name: 'Arjun Kumar',
+    name: 'Padmanaj Trivedi',
     role: 'Content & Research',
-    bio: 'Deep diving into topics to provide rich, well-researched content for the event.'
+    bio: 'Diving deep into ideas and insights, curating well-researched content that adds substance and clarity.'
+  },
+  {
+    id: '8',
+    name: 'Richa Mishra',
+    role: 'Propagation',
+    bio: 'Extending the reach of the event through strategic outreach, ensuring the message travels far and wide.'
+  },
+  {
+    id: '9',
+    name: 'Vaibhav Katiyar',
+    role: 'Sponsorship',
+    bio: 'Strengthening the backbone of the event by forging collaborations that align vision with value.'
+  },
+  {
+    id: '10',
+    name: 'Vedangi Prajapati',
+    role: 'Sponsorship',
+    bio: 'Connecting ideas with opportunity, nurturing sponsor relationships that empower the event’s impact.'
+  },
+  {
+    id: '11',
+    name: 'Vikas Yadav',
+    role: 'Social Media and Design',
+    bio: 'Transforming concepts into compelling visuals and digital narratives that leave a lasting impression.'
   }
 ];
 

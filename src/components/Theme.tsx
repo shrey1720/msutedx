@@ -71,24 +71,12 @@ export default function Theme() {
 
             <div className="mt-auto pt-6 border-t border-white/5">
               <p className="text-xl font-bold text-red-500 italic">
-                "{theme.closingLine}"
+                &quot;{theme.closingLine}&quot;
               </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Decorative element */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-20 text-center"
-        >
-          <div className="inline-block p-1 bg-gradient-to-tr from-red-600 to-white rounded-full">
-            <div className="bg-black rounded-full p-8 text-6xl">✨</div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -42,13 +42,6 @@ export default function Registration() {
                         </div>
                     </div>
 
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-red-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-[0_0_30px_rgba(230,43,30,0.3)] hover:shadow-[0_0_50px_rgba(230,43,30,0.5)] transition-all cursor-pointer"
-                    >
-                        Book Your Tickets Now
-                    </motion.button>
 
                     <p className="mt-8 text-xs text-gray-500 uppercase tracking-widest">
                         Limited seats available • February 28, 2026
